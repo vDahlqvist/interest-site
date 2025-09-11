@@ -52,3 +52,11 @@ body, html {
     color: white;
     background-color: #A69581;
 }
+a {
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background-color: #A69581; 
+    text-decoration: none;
+}
