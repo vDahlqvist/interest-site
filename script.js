@@ -25,3 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const contentDiv = document.querySelector('.content');
+    const footer = document.querySelector('footer');
+    
+    // Check if we're at the bottom when scrolling
+    contentDiv.addEventListener('scroll', function() {
+        // Calculate when we're at the bottom
+        const scrollPosition = contentDiv.scrollTop + contentDiv.clientHeight;
+        const scrollHeight = contentDiv.scrollHeight;
+        
+        // Show footer when close to bottom (within 20px)
+        if (scrollHeight - scrollPosition <= 20) {
+            footer.style.opacity = "1";
+        } else {
+            footer.style.opacity = "0";
+        }
+    });
+});
